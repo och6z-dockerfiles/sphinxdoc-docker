@@ -1,0 +1,2 @@
+docker build .
+docker run -it --name container-name image-id /bin/bash
