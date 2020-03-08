@@ -1,2 +1,2 @@
-docker build --no-cache .
+docker build --no-cache --build-arg CODE_VERSION=slim .
 docker run -it --name container-name image-id /bin/bash
