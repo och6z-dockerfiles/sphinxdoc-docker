@@ -7,3 +7,5 @@ docker container start container-id
 docker exec -it --user $(id -un) container-id /bin/bash
 
 sphinx-quickstart --ext-githubpages ./src
+
+cat ./rule >> ./src/Makefile
