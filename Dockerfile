@@ -20,4 +20,4 @@ ARG UID_NAME
 RUN addgroup --gid ${GID} ${GID_NAME} \
     && adduser --uid ${UID} --ingroup ${GID_NAME} --home /home/${UID_NAME} --shell /bin/bash --disabled-password --gecos "" ${UID_NAME}
 
-WORKDIR /home/${UID_NAME}/docs
+WORKDIR /home/${UID_NAME}/_data
