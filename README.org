@@ -1,9 +1,9 @@
 docker build --no-cache --build-arg CODE_VERSION=slim --build-arg GID=$(id -g) --build-arg GID_NAME=$(id -gn) --build-arg UID=$(id -u) --build-arg UID_NAME=$(id -un) -f Dockerfile .
-docker run -it --name container-name image-id /bin/bash
-
-docker container start container-id
-docker exec -it --user $(id -un) container-id /bin/bash
 
 docker run -it --volume $(pwd)/docs:/home/$(id -un)/docs --name container-name image-id /bin/bash
+
+docker container start container-id
+
+docker exec -it --user $(id -un) container-id /bin/bash
 
 sphinx-quickstart --ext-githubpages ./src
