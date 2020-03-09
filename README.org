@@ -5,3 +5,5 @@ docker container start container-id
 docker exec -it --user $(id -un) container-id /bin/bash
 
 docker run -it --volume $(pwd)/docs:/home/$(id -un)/docs --name container-name image-id /bin/bash
+
+sphinx-quickstart --ext-githubpages ./src
