@@ -1,8 +1,0 @@
-DOCS = ../docs
-docs:
-	@rm -rf "$(DOCS)"
-	@mv "$(BUILDDIR)/html" "$(DOCS)"
-github:
-	@rm -rf "$(BUILDDIR)" "$(DOCS)"
-	@make html
-	@mv "$(BUILDDIR)/html" "$(DOCS)"
